@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin:'application'
+
+version = '1.0'
+mainClassName = "ExportIssues"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.0.6'
+    compile 'org.glassfish.jersey.core:jersey-client:2.11'
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.11'
+    compile 'net.sf.opencsv:opencsv:2.3'
+}
