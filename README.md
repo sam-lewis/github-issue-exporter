@@ -12,6 +12,9 @@ Building
 Running
 --------
 `cd build\distributions`
+
 `unzip unzip github-export-1.0.zip`
+
 `cd github-export-1.0/bin`
+
 `github-export <username> <password> <repo>`
