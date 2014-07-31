@@ -14,7 +14,7 @@ Running
 --------
 `cd build\distributions`
 
-`unzip unzip github-export-1.0.zip`
+`unzip github-export-1.0.zip`
 
 `cd github-export-1.0/bin`
 
