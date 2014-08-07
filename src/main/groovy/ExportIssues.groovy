@@ -47,7 +47,7 @@ def outFile = new File('issues.csv')
 println "Writing CSV: $outFile.absolutePath"
 def csvWriter = new CSVWriter(new FileWriter(outFile))
 
-def headers = ['number', 'url', 'title', 'state', 'assignee.login', 'labels.name'] as String[]
+def headers = ['number', 'title', 'body', 'state', 'assignee.login', 'labels.name'] as String[]
 csvWriter.writeNext(headers)
 allIssues.each { issue ->
     def items = headers.collect { header ->
