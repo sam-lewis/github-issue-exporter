@@ -47,13 +47,16 @@ def outFile = new File('issues.csv')
 println "Writing CSV: $outFile.absolutePath"
 def csvWriter = new CSVWriter(new FileWriter(outFile))
 
-def headers = ['number', 'url', 'title', 'state', 'assignee.login'] as String[]
+def headers = ['number', 'url', 'title', 'state', 'assignee.login', 'labels.name'] as String[]
 csvWriter.writeNext(headers)
 allIssues.each { issue ->
     def items = headers.collect { header ->
         def result = issue
         header.tokenize('.').each {
             result = result?."${it}"
+        }
+        if(result instanceof Collection) {
+            result = result.join(' ')
         }
         result
     }
